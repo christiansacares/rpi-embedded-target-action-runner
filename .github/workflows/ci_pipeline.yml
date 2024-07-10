@@ -50,7 +50,7 @@ jobs:
           ENV_VERSION_MINOR: ${{ steps.version_handling.outputs.minor }}
           ENV_VERSION_BUGFIX: ${{ steps.version_handling.outputs.bugfix }}
           ENV_SHORT_GIT_HASH: ${{ steps.short-sha.outputs.sha }}
-               - name: Rename and copy files
+      - name: Rename and copy files
         run: |
           mkdir stm32-firmware
           cp application/Release/sample_application.bin stm32-firmware/sample_application-${{ steps.version_handling.outputs.file_postfix }}.bin
