@@ -10,7 +10,7 @@ jobs:
     steps:
       - name: Checkout the repository
         uses: actions/checkout@v4.1.7
-              - name: Determine short GIT hash
+      - name: Determine short GIT hash
         id: short-sha
         run: |
           echo "sha=$(echo ${{github.sha}} | sed 's/^\(.\{10\}\).*$/\1/')" >> $GITHUB_OUTPUT
